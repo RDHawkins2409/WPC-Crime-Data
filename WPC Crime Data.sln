@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPC Crime Data", "WPC Crime Data\WPC Crime Data.csproj", "{F8C33423-B5C3-48AA-99BA-5124766F359E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CrimeTests", "CrimeTests\CrimeTests.csproj", "{BEBEFF73-EFE9-4888-8277-7EBDD8626851}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F8C33423-B5C3-48AA-99BA-5124766F359E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F8C33423-B5C3-48AA-99BA-5124766F359E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F8C33423-B5C3-48AA-99BA-5124766F359E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F8C33423-B5C3-48AA-99BA-5124766F359E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BEBEFF73-EFE9-4888-8277-7EBDD8626851}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEBEFF73-EFE9-4888-8277-7EBDD8626851}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEBEFF73-EFE9-4888-8277-7EBDD8626851}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEBEFF73-EFE9-4888-8277-7EBDD8626851}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7B91FCF4-6B84-4B0B-A5D2-9185152CC801}
+	EndGlobalSection
+EndGlobal
