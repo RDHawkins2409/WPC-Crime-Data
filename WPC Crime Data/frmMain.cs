@@ -48,24 +48,31 @@ namespace WPC_Crime_Data
             string content = new StreamReader(response.GetResponseStream()).ReadToEnd();
             List<Crime> deserialised = JsonConvert.DeserializeObject<List<Crime>>(content);
             List<Tuple<string, int>> summary = new List<Tuple<string, int>>();
-            foreach (Crime c in deserialised)
+            if (deserialised.Count > 0)
             {
-                int index = summary.FindIndex(x => x.Item1 == c.Category);
-                if (index > -1)
+                foreach (Crime c in deserialised)
                 {
-                    summary[index] = new Tuple<string, int>(summary[index].Item1, summary[index].Item2 + 1);
+                    int index = summary.FindIndex(x => x.Item1 == c.Category);
+                    if (index > -1)
+                    {
+                        summary[index] = new Tuple<string, int>(summary[index].Item1, summary[index].Item2 + 1);
+                    }
+                    else
+                    {
+                        summary.Add(new Tuple<string, int>(c.Category, 1));
+                    }
                 }
-                else
+                string output = "";
+                foreach (Tuple<string, int> item in summary.OrderBy(x => x.Item1))
                 {
-                    summary.Add(new Tuple<string, int>(c.Category, 1));
+                    output = output + item.Item1 + " - " + item.Item2 + Environment.NewLine;
                 }
+                return output;
             }
-            string output = "";
-            foreach (Tuple<string, int> item in summary.OrderBy(x => x.Item1))
+            else
             {
-                output = output + item.Item1 + " - " + item.Item2 + Environment.NewLine;
+                return "No Crime Data Found";
             }
-            return output;
         }
     }
 }
